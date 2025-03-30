@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Reflection.Emit;
 using Microsoft.EntityFrameworkCore;
-using 
+using RedeSocialUniversitaria.Domain;
+
 namespace RedeSocialUniversitaria.Infra
 {
     public class SqlContext : DbContext
@@ -16,6 +17,9 @@ namespace RedeSocialUniversitaria.Infra
 
         }
 
-        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Postagem> Postagens { get; set; }
+        public DbSet<Evento> Eventos { get; set; }
+        public DbSet<Comentario> Comentarios { get; set; }
     }
 }
